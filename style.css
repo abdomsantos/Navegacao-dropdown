@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	background-color: #fafafa;
+	font-size: 18px;
+	position: relative;
+	font-family: 'Epilogue', sans-serif;
+	width: 100%; 
+}
+
+h1{
+	font-size: 80px;
+	font-weight: bold;
+	color: #141414;
+}
+
+p{
+	margin-top: 30px;
+	width: 82%;
+	text-align: justify;
+	color: #696969;
+	margin-bottom: 20px;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*Links no Geral - barra de nav*/
+a:link, a:visited {
+	color: #696969;
+	padding: 5px;
+}
+a:hover{
+	color: #141414;
+	padding: 5px;
+}
+
+/*Link do login*/
+.login a:link, .login a:visited{
+	color: #696969;
+	padding: 10px 25px;
+}
+.login a:hover{
+	color: #141414;
+	padding: 10px 25px;
+}
+
+/*Link do texto principal*/
+#link-learn a:link, #link-learn a:visited{
+	color: #fafafa;
+	border: 1px solid #141414;
+	border-radius: 15px;
+	background: #141414;
+	padding: 15px 25px;
+	position: absolute;
+	
+}
+#link-learn a:hover{
+	color: #141414;
+	border: 1px solid #141414;
+	border-radius: 15px;
+	background: #fafafa;
+	padding: 15px 25px;
+	position: absolute;	
+}
+
+/*CCS DO CABEÇALHO*/
+#cabeçalho{
+	margin: 30px;
+	font-size: 15px;
+}
+
+#logo{
+	margin-left: 15px;
+}
+
+.login{
+	position: absolute;
+	top: 0px;
+	right: 45px;
+}
+
+.menu{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: none;
+}
+
+.register{
+	border: 2px solid;
+	border-radius: 15px;
+}
+
+#barra-nav{
+	position: absolute;
+	top: -3px;
+	left: 180px;
+}
+
+.option{
+	margin: 15px;
+	position: relative;
+	top: -10px;
+}
+
+.arrow-up{
+	display: none;
+}
+
+.sub-menu{
+	display: none;
+	background-color: white;
+	padding: 15px 10px;
+	border-radius: 10px;
+	position: absolute;
+	right: 0x;
+	top: 6px;
+	z-index: 1;
+	width: 130px;
+	box-shadow: 0px 0px 8px #696969;
+}
+
+.elementos{
+	display: flex;
+	padding: 5px;
+	width: 100%;
+}
+
+nav ul li:hover .arrow-down{
+	display: none;
+}
+
+nav ul li:hover .arrow-up{
+	display: inline-flex;
+}
+
+nav ul{
+	display: inline-flex;
+	list-style: none;
+} 
+
+nav ul li:hover .sub-menu{
+	display: block;
+	position: absolute;
+	margin-top: 15px;
+	margin-right: 0px;
+}
+
+nav ul li:hover .sub-menu ul{
+	display: block;
+}
+
+.nav-mobile{
+	display: none;
+}
+
+.login2{
+	display: none;
+}
+/*FIM DO CÓDIGO CSS DO CABEÇALHO*/
+
+/*CÓDIGO CSS DO CORPO DA PÁGINA*/
+#img-principal{
+	width: 360px;
+	float: right;
+	margin-top: 15px;
+	margin-right: 11%;
+}
+
+#txt-principal{
+	margin-top: 60px;
+	margin-left: 13%;
+	float: left;
+	width: 38%;
+	z-index: 0;
+}
+
+.img-rodape{
+	display: inline;
+	margin-top: 100px;
+	margin-right: 33px;
+}
+
+#img-principal-mobile{
+	width: 100%;
+	display: none;
+}
+
+.shadow{
+	background-color: black;
+	opacity: 0.5;
+	width: 30%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+/*FIM DO CÓDIGO CSS DO CORPO DA PÁGINA*/
+
+/*DISPOSITIVO MOBILE*/
+@media (max-width: 768px){
+	#barra-nav,
+	.login{
+		display: none;
+	}
+
+	.menu{
+		display: block;
+	}
+
+	.icon-menu{
+		position: absolute;
+		top: 0px;
+		right: 15px;
+		cursor: pointer;
+	}
+
+	.menu.on .icon-menu{
+		display: none;
+	}
+
+	.icon-close-menu{
+		display: none;
+	}
+
+	.menu.on .icon-close-menu{
+		position: absolute;
+		top: 30px;
+		display: block;
+		right: 15px;
+		cursor: pointer;
+	}
+
+    .menu.on{
+    	background-color: #fafafa;
+        position: fixed;
+        top:0;
+        right:0;
+        width: 70%;
+        height: 100%;         
+    }	
+
+    .menu.on .shadow{
+    	display: block;
+    }
+
+    .menu.on .nav-mobile{
+    	text-align: center;
+    	display: block;
+    	margin-top: 20px;
+    }
+
+    .menu.on nav ul{
+    	display: block;
+    	text-align: left;
+    	margin-top: 80px;
+    	margin-left: 5px;
+    	font-weight: 580;
+    }
+
+    .menu.on .login2{
+    	display: block;
+    	margin-top: 50px;
+    }
+
+    .menu.on .register{
+    	padding: 15px 20px;
+    	margin: 20px 30px;
+    	display: block;
+    }
+
+
+   .menu.on .option{
+   		margin-top: 0;
+    	padding-bottom: 10px;
+    }
+
+    #img-principal{
+    	display: none;
+    }
+
+    #img-principal-mobile{
+    	display: block;
+    }
+
+    #logo {
+    	margin-left: -15px;
+	}
+
+	#txt-principal{
+		width: 100%;
+		margin-left: 0px;
+		text-align: center;
+	}
+	h1 {
+		display: inline;
+		font-size: 38px;
+		font-weight: 900;
+	}
+
+	p{
+		width: 90%;
+		margin-right: 8px;
+		margin-left: 8px;
+		text-align: center;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	#link-learn a{
+		position: static !important;
+
+	}
+	.img-rodape{
+		width: 15%;
+		margin: 0px;
+	}
+	.imagens-rodape{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: 64px 0px;
+		gap: 24px;
+	}
+	details > summary{
+		font-size: 15px;
+		font-family: 'Epilogue', sans-serif;
+		color: #696969;
+		cursor: pointer;
+		position: relative;
+		top: 70px;
+		left: 15px;
+		margin-bottom: 25px;
+		width: 100px;
+		list-style: none;
+	}
+
+	.sub-menu-web{
+		font-size: 15px;
+		padding-left: 30px;
+		margin-bottom: -40px;
+	}
+
+}
